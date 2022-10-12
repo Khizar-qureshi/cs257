@@ -66,6 +66,16 @@ CREATE TABLE noc_info(
     country text,
     notes text
 );
+
+--
+-- Name: link_table; Type TABLE; SChema: public; Owner: -
+--
+CREATE TABLE link_table(
+    athlete_id INTEGER,
+    event_id INTEGER,
+    medal TEXT,
+);
+
     
 --
 --List all the NOCs (National Olympic Committees), in alphabetical order by abbreviation. 
@@ -81,3 +91,21 @@ ORDER BY noc_abbreviation;
 SELECT athletes.name
 FROM athletes
 WHERE athletes.country = 'Jamaica';
+
+--
+-- List all the medals won from Greg Louganis
+--
+
+SELECT event_results.medal, events.name
+FROM event_results, events, athletes, games, linked_table
+WHERE athletes.name = 'Greg Louganis'
+AND events.id = linked_table.event_id
+ORDER BY games.year;
+
+
+--
+-- List all the NOCS and the number of gold medals they won
+--
+SELECT noc_info.noc_abbreviation, event_results.medal
+FROM event_results, noc_info
+WHERE event_results.medal = 'Gold';

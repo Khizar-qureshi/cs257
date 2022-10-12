@@ -138,17 +138,19 @@ with open('athlete_events.csv') as original_data_file,\
         medal = row[14]
         writer.writerow([athlete_id, event_id, medal])
         
-with open('athlete_events.csv', 'w') as original_data_file,\
+with open('athlete_events.csv') as original_data_file,\
         open('linked_table.csv', 'w') as linked_file:
     reader = csv.reader(original_data_file)
-    writer = csv.writer(results_file)
+    writer = csv.writer(linked_file)
     heading_row = next(reader)
     for row in reader:
         athlete_id = row[0]
+        event_name = row[13]
         event_id = events[event_name]
-        games_id = games[game]
+        #game = row[9]
+        #game_id = games[game]
         medal = row[14]
-        writer.writerow([athlete_id, event_id, games_id, medal])
+        writer.writerow([athlete_id, event_id, medal])
                 
         
 
