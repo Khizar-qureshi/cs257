@@ -29,7 +29,7 @@ def main():
     '''
     
     arguments = parse_command_line()
-    # if the user does not print a command, break
+    # if the user does not print a command, break main function
     if len(arguments) < 1:
         return
     
@@ -67,7 +67,5 @@ def main():
             
     else: 
         print('Invalid number of inputs. Please type -h or --help for usage statment.')
-                
-    
-        
+                       
 main()

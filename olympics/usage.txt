@@ -1,9 +1,9 @@
 NAME
-    olympics - provides information of athletes, name of committes, and events during the olympic games
-
+    olympics - Provides information of which athelte participated on a specified noc, amount of gold medals each noc has won, 
+               and which events occured during a specified year.
 SYNOPSIS
-    python3 olympics.py a [name of noc]
-    python3 olympics.py athlete [name of noc]
+    python3 olympics.py a [name_of_noc]
+    python3 olympics.py athlete [name_of_noc]
     python3 olympics.py n
     python3 olympics.py nocs
     python3 olympics.py e [year]

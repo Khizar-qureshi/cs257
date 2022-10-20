@@ -83,8 +83,6 @@ with open('athlete_events.csv') as original_data_file,\
             games[game_name] = game_id
             writer.writerow([game_id, game_name, year, season, city])
 
-
-       
 nocs = {}
 with open('athlete_events.csv') as original_data_file,\
         open('noc_info.csv', 'w') as nocs_file:
