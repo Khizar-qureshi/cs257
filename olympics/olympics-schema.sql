@@ -18,13 +18,16 @@ SET default_table_access_method = heap;
 --
 -- Name: athlete; Type: TABLE; Schema: public; Owner: -
 --
-
 CREATE TABLE athletes (
     id INTEGER,
-    name TEXT,
-    noc TEXT,
-    country TEXT,
+    name TEXT
 );
+
+-- Name: event_category;
+CREATE TABLE event_category(
+    id INTEGER,
+    name TEXT --i.e "Alpine Skating"
+)
 
 --
 -- Name: events; Type: TABLE; Schema: public; Owner: -
@@ -32,19 +35,12 @@ CREATE TABLE athletes (
 
 CREATE TABLE events (
     id INTEGER,
-    name TEXT,
-    city TEXT,
+    category_id INTEGER,
+    name TEXT-- Men's soccer
 );
 
---
--- Name: event_results; Type: TABLE; Schema: public; Owner: -
---
-    
-CREATE TABLE event_results(
-    athlete_id INTEGER,
-    event_id INTEGER,
-    medal TEXT,
-);
+
+
 
 --
 -- Name: games; Type: TABLE; Schema: public; Owner: -
@@ -53,7 +49,8 @@ CREATE TABLE event_results(
 CREATE TABLE games(
     id INTEGER,
     year INTEGER,
-    season TEXT
+    season TEXT,
+    city TEXT,
 );
 
 --
@@ -63,16 +60,17 @@ CREATE TABLE games(
 CREATE TABLE noc_info(
     id INTEGER,
     noc_abbreviation text,
-    country text,
-    notes text
 );
 
 --
--- Name: link_table; Type TABLE; SChema: public; Owner: -
+-- Name: event_results; Type: TABLE; Schema: public; Owner: -
 --
-CREATE TABLE link_table(
+    
+CREATE TABLE event_results(
     athlete_id INTEGER,
     event_id INTEGER,
+    games_id INTEGER,
+    noc_id INTEGER,
     medal TEXT,
 );
 
@@ -89,18 +87,21 @@ ORDER BY noc_abbreviation;
 -- List all the athletes from Jamaica
 --
 SELECT athletes.name
-FROM athletes
-WHERE athletes.country = 'Jamaica';
+FROM athletes, noc_info, event_results
+WHERE noc_info.country = 'Jamaica'
+AND athletes.id = event_results.athlete_id
+AND noc_info.id = event_results.noc_id
+;
 
 --
 -- List all the medals won from Greg Louganis
 --
 
-SELECT event_results.medal, events.name
-FROM event_results, events, athletes, games, linked_table
-WHERE athletes.name = 'Greg Louganis'
-AND events.id = linked_table.event_id
-ORDER BY games.year;
+SELECT event_results.medal
+FROM athletes, event_results
+WHERE athletes.name = 'A Dijiang'
+AND athletes.id = event_results.athlete_id;
+
 
 
 --

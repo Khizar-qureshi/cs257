@@ -21,6 +21,7 @@
         id INTEGER,
         name TEXT,
         city TEXT,
+        event_sport TEXT,
     );
     
     CREATE TABLE event_results(
@@ -57,6 +58,8 @@ import csv
 '''
 Creates the athletes.csv
 '''
+
+
 # create a dictionary that maps athlete_id -> athlete_name, athletes_noc, and athlete_olympic
 athletes = {}
 with open('athlete_events.csv') as original_data_file,\
@@ -67,14 +70,23 @@ with open('athlete_events.csv') as original_data_file,\
     for row in reader:
         athlete_id = row[0]
         athlete_name = row[1]
-        athlete_noc = row[7]
-        athlete_country = row[6]
         if athlete_id not in athletes:
             athletes[athlete_id] = athlete_name
-            athletes[athlete_id] = athlete_noc
-            athletes[athlete_id] = athlete_country
-            writer.writerow([athlete_id, athlete_name, athlete_noc, athlete_country])
-            
+            writer.writerow([athlete_id, athlete_name])
+
+event_categories = {}
+with open('athlete_events.csv') as original_data_file,\
+        open('event_categories.csv', 'w') as event_categories_file:
+    reader = csv.reader(original_data_file)
+    writer = csv.writer(event_categories_file)
+    heading_row = next(reader)
+    for row in reader:
+        sport = row[12]
+        if sport not in event_categories:
+             event_category_id = len(event_categories) + 1
+             event_categories[sport] = event_category_id
+             writer.writerow([event_category_id,sport])
+
 
 events = {}
 with open('athlete_events.csv') as original_data_file,\
@@ -84,13 +96,14 @@ with open('athlete_events.csv') as original_data_file,\
     heading_row = next(reader)
     for row in reader:
         event_name = row[13]
-        event_sport = row[12]
-        city = row[11]
+        event_category_id = event_categories[sport]
         if event_name not in events:
             events_id = len(events) + 1
             events[event_name] = events_id
-            writer.writerow([events_id, event_name, city, event_sport])
-            
+            sport = row[12]
+            event_category_id = event_categories[sport]
+            writer.writerow([events_id, event_name,event_category_id])
+
 games = {}
 with open('athlete_events.csv') as original_data_file,\
         open('games.csv', 'w') as games_file:
@@ -98,32 +111,30 @@ with open('athlete_events.csv') as original_data_file,\
     writer = csv.writer(games_file)
     heading_row = next(reader)
     for row in reader:
-        game = row[8]
+        game_name = row[8]
         year = row[9]
         season = row[10]
-        if game not in games:
+        city = row[11]
+        if game_name not in games:
             game_id = len(games) + 1
-            games[game_id] = game
-            games[game_id] = year
-            games[game_id] = season
-            writer.writerow([game_id, game, year, season])
-            
+            games[game_name] = game_id
+            writer.writerow([game_id, game_name, year, season, city])
+
+
+       
 nocs = {}
-with open('noc_regions.csv') as original_data_file,\
+with open('athlete_events.csv') as original_data_file,\
         open('noc_info.csv', 'w') as nocs_file:
     reader = csv.reader(original_data_file)
     writer = csv.writer(nocs_file)
     heading_row = next(reader)
     for row in reader:
         noc_id = len(nocs) + 1
-        noc_abbreviation = row[0]
-        country = row[1]
-        notes = row[2]
-        if noc_id not in nocs:
-            nocs[noc_id] = noc_abbreviation
-            nocs[noc_id] = country
-            nocs[noc_id] = notes
-            writer.writerow([noc_id, noc_abbreviation, country, notes])
+        noc_abbreviation = row[7]
+        country = row[6]
+        if noc_abbreviation not in nocs:
+            nocs[noc_abbreviation] = noc_id
+            writer.writerow([noc_id, noc_abbreviation, country])
             
             
 with open('athlete_events.csv') as original_data_file,\
@@ -135,23 +146,15 @@ with open('athlete_events.csv') as original_data_file,\
         athlete_id = row[0]
         event_name = row[13]
         event_id = events[event_name]
-        medal = row[14]
-        writer.writerow([athlete_id, event_id, medal])
+        game_name = row[8]
+        game_id = games[game_name]
+        noc_abbreviation = row[7]
+        noc_id = nocs[noc_abbreviation]
+        medal = row[14]    
+        writer.writerow([athlete_id, event_id, game_id, noc_id, medal])
         
-with open('athlete_events.csv') as original_data_file,\
-        open('linked_table.csv', 'w') as linked_file:
-    reader = csv.reader(original_data_file)
-    writer = csv.writer(linked_file)
-    heading_row = next(reader)
-    for row in reader:
-        athlete_id = row[0]
-        event_name = row[13]
-        event_id = events[event_name]
-        #game = row[9]
-        #game_id = games[game]
-        medal = row[14]
-        writer.writerow([athlete_id, event_id, medal])
-                
+
+        
         
 
     
