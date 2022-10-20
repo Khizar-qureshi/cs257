@@ -7,60 +7,23 @@
     
     This olympics database utilizes 5 tables which were contructed in psql.
     The design is the following
-    
-    # Athletes table
-    CREATE TABLE athletes (
-        id INTEGER,
-        name TEXT,
-        noc TEXT,
-        country TEXT,
-    );
-
-
-    CREATE TABLE events (
-        id INTEGER,
-        name TEXT,
-        city TEXT,
-        event_sport TEXT,
-    );
-    
-    CREATE TABLE event_results(
-        athlete_id INTEGER,
-        event_id INTEGER,
-        medal TEXT,
-    );
-    
-    CREATE TABLE games(
-        id INTEGER,
-        year INTEGER,
-        season TEXT
-    );
-    
-    CREATE TABLE noc_info(
-        id INTEGER,
-        noc_abbreviation text,
-        country text,
-        notes text
-    );
-    
+       
     When this code is ran, we willl end up with 5 new files: 
     athletes.csv,
     event_categories.csv,
     events.csv
     games.csv
     noc_info.csv
+    event_results.csv
 
 
 '''
 
 import csv
 
-'''
-Creates the athletes.csv
-'''
 
 
-# create a dictionary that maps athlete_id -> athlete_name, athletes_noc, and athlete_olympic
+
 athletes = {}
 with open('athlete_events.csv') as original_data_file,\
         open('athletes.csv', 'w') as athletes_file:
