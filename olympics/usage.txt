@@ -1,0 +1,35 @@
+NAME
+    olympics - provides information of athletes, name of committes, and events during the olympic games
+
+SYNOPSIS
+    python3 olympics.py a [name of noc]
+    python3 olympics.py athlete [name of noc]
+    python3 olympics.py n
+    python3 olympics.py nocs
+    python3 olympics.py e [year]
+    python3 olympics.py event [year]
+    python3 olympics.py -h 
+    python3 olympics.py --help 
+
+DESCRIPTION
+    The following options are available:
+
+    a | athlete    Given a name of noc, prints a list of athlete from the specified noc
+    n | nocs       List all the NOCS and the number of gold medals they have won, in decreasing order of the number of gold medals
+    e | event      Given a year, prints a list of events that occured during the year 
+    -h | --help    Prints the usage statement
+
+
+EXAMPLES
+    Returns a list of athletes who are in the CHN (China)
+        python3 olympics.py a CHN
+
+    Returns the list of all nocs and the number of gold medals they have one
+        python3 olympics.py n
+
+    Returns a list of events that occured during the year
+        python3 olympics e 1992
+    
+    Returns the usage statement
+        python3 books.py -h
+
