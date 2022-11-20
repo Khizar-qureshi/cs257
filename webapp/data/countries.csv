@@ -1,0 +1,583 @@
+1,"Turkey,
+Russia"
+2,Italy
+3,Indonesia
+4,Ivory Coast
+5,Nigeria
+6,United States
+7,"South Africa,
+Zimbabwe"
+8,Ghana
+9,Philippines
+10,"Algeria,
+Egypt"
+11,France
+12,"China,
+India"
+13,Ethiopia
+14,Mexico
+15,Greece
+16,Antigua and Barbuda
+17,India
+18,"Ghana,
+Ivory Coast"
+19,Argentina
+20,"Romania,
+Greece,
+Albania"
+21,"Iraq,
+Syria"
+22,"Spain,
+Portugal"
+23,Australia
+24,Austria
+25,"Russia,
+Azerbaijan"
+26,"India,
+Iran"
+27,Bolivia
+28,"Azerbaijan,
+Russia"
+29,Cameroon
+30,Bahamas
+31,Nepal
+32,Senegal
+33,"North Macedonia,
+Serbia"
+34,"Pakistan,
+Iran"
+35,"Pakistan,
+India"
+36,"Mali,
+Ivory Coast"
+37,"Philippines,
+Malaysia"
+38,"Indonesia,
+Malaysia"
+39,"Nepal,
+India"
+40,Barbados
+41,"Tajikistan,
+Afghanistan"
+42,"Spain,
+France"
+43,"Liberia,
+Sierra Leone"
+44,"Austria,
+Germany"
+45,"Belarus,
+Poland"
+46,Belize
+47,"Zambia,
+D.R. Congo"
+48,"Bangladesh,
+India"
+49,"India,
+Nepal"
+50,Israel
+51,"India,
+Bangladesh"
+52,"Vanuatu,
+New Caledonia"
+53,"Mali,
+Burkina Faso"
+54,"Bosnia and Herzegovina,
+Serbia"
+55,Brazil
+56,Costa Rica
+57,United Kingdom
+58,"Israel,
+United States,
+Uzbekistan"
+59,"Bulgaria,
+Turkey"
+60,"Turkey,
+Bulgaria"
+61,Bhutan
+62,Myanmar
+63,Pakistan
+64,Russia
+65,Canada
+66,"China,
+Hong Kong"
+67,Cape Verde Islands
+68,"Suriname,
+Trinidad and Tobago,
+Guyana"
+69,Spain
+70,"Honduras,
+Guatemala,
+El Salvador,
+Nicaragua,
+Costa Rica"
+71,Chad
+72,"Bangladesh,
+Myanmar"
+73,"China,
+Mongolia"
+74,Iraq
+75,China
+76,"Algeria,
+Tunisia"
+77,"Malawi,
+Zambia"
+78,Uganda
+79,Chile
+80,Bangladesh
+81,Guatemala
+82,Micronesia
+83,"Egypt,
+Yemen"
+84,Armenia
+85,Colombia
+86,Comoros
+87,"Egypt,
+Sudan"
+88,"Ukraine,
+Turkey,
+Uzbekistan"
+89,"Croatia,
+Slovenia"
+90,Cuba
+91,"Cyprus,
+Greece"
+92,"Cyprus,
+Turkey"
+93,"Czech Republic,
+Slovakia"
+94,"Denmark,
+Sweden"
+95,"Hungary,
+Romania"
+96,Sudan
+97,"Afghanistan,
+Pakistan"
+98,"Maldives,
+India"
+99,"Sudan,
+South Sudan"
+100,Dominica
+101,Dominican Republic
+102,"Kyrgyzstan,
+Kazakhstan"
+103,"Netherlands,
+Belgium"
+104,"Ivory Coast,
+Burkina Faso"
+105,"Bhutan,
+India"
+106,"Armenia,
+Russia"
+107,Vatican City
+108,Ecuador
+109,Egypt
+110,"Egypt,
+Israel"
+111,"Brazil,
+France"
+112,Estonia
+113,"Ghana,
+Togo"
+114,"Myanmar,
+India"
+115,"Equatorial Guinea,
+Gabon"
+116,Fiji
+117,"Finland,
+Sweden"
+118,Belgium
+119,"Benin,
+Togo"
+120,"Ghana,
+Burkina Faso"
+121,Germany
+122,"France,
+Senegal"
+123,French Guiana
+124,Netherlands
+125,"China,
+Taiwan"
+126,"Guinea,
+Senegal"
+127,"Sudan,
+Chad"
+128,"Honduras,
+Belize,
+Guatemala"
+129,"Albania,
+Kosovo,
+Montenegro,
+North Macedonia"
+130,"Togo,
+Benin"
+131,"Georgia,
+Turkey"
+132,"Germany,
+Austria,
+Switzerland"
+133,"Ethiopia,
+Eritrea"
+134,"Kenya,
+Tanzania"
+135,Kiribati
+136,"Ivory Coast,
+Liberia"
+137,Slovenia
+138,"Burkina Faso,
+Togo"
+139,"Greece,
+Cyprus"
+140,Grenada
+141,"Guadeloupe,
+France"
+142,Paraguay
+143,"Guinea-Bissau,
+Senegal"
+144,"Kuwait,
+United Arab Emirates,
+Saudi Arabia"
+145,"Benin,
+Nigeria"
+146,"India,
+Pakistan"
+147,Guyana
+148,"Haiti,
+Dominican Republic"
+149,"Morocco,
+Israel"
+150,"China,
+South Korea,
+North Korea"
+151,"United States,
+Israel"
+152,Mauritania
+153,"Nigeria,
+Niger"
+154,"Namibia,
+Botswana"
+155,"Vietnam,
+China"
+156,Iceland
+157,"Russia,
+Kazakhstan"
+158,"Canada,
+Greenland"
+159,"Iraq,
+Israel"
+160,"Ireland,
+United Kingdom"
+161,"Ireland,
+United States"
+162,Thailand
+163,"Afghanistan,
+Tajikistan"
+164,"Croatia,
+Italy"
+165,Croatia
+166,Jamaica
+167,Japan
+168,"Israel,
+United States"
+169,"Iran,
+Israel"
+170,"Russia,
+Ukraine"
+171,"Senegal,
+Gambia"
+172,South Sudan
+173,"Ukraine,
+Russia"
+174,"Georgia,
+Israel"
+175,"Greece,
+Israel"
+176,"Turkey,
+Israel"
+177,"Azerbaijan,
+Russia,
+Israel"
+178,"Russia,
+Turkey"
+179,Afghanistan
+180,Algeria
+181,"Myanmar,
+China"
+182,Malaysia
+183,"Romania,
+Ukraine"
+184,"Russia,
+Mongolia"
+185,Uzbekistan
+186,"Myanmar,
+Thailand"
+187,"Mali,
+Senegal"
+188,"Kazakhstan,
+China"
+189,"Mongolia,
+Russia"
+190,"Cambodia,
+Vietnam"
+191,"D.R. Congo,
+Congo (Brazzaville)"
+192,Angola
+193,"Rwanda,
+Uganda"
+194,Burundi
+195,Liberia
+196,Congo (Brazzaville)
+197,"Guinea,
+Liberia"
+198,"South Korea,
+North Korea"
+199,"Uzbekistan,
+Russia"
+200,"Gabon,
+Congo (Brazzaville)"
+201,Guinea
+202,"Liberia,
+Ivory Coast"
+203,"Mexico,
+United States"
+204,"Panama,
+Colombia"
+205,"Sierra Leone,
+Guinea"
+206,"Syria,
+Turkey"
+207,"China,
+Nepal"
+208,"Kyrgyzstan,
+China"
+209,"India,
+China"
+210,"United States,
+Canada"
+211,"Laos,
+Cambodia"
+212,Latvia
+213,"Turkey,
+Georgia"
+214,"Ukraine,
+Poland"
+215,"Canada,
+United States"
+216,"Libya,
+Egypt"
+217,"Libya,
+Israel"
+218,"Italy,
+Monaco"
+219,Sierra Leone
+220,"Nepal,
+China"
+221,"Lithuania,
+Poland"
+222,"Italy,
+Switzerland"
+223,Romania
+224,D.R. Congo
+225,"Cuba,
+Dominican Republic"
+226,Iran
+227,"Luxembourg,
+France"
+228,"North Macedonia,
+Albania"
+229,Serbia
+230,Madagascar
+231,"Malaysia,
+Brunei,
+Singapore"
+232,Malta
+233,"Guatemala,
+Mexico"
+234,"Guinea,
+Ivory Coast"
+235,"Liberia,
+Guinea"
+236,"Chile,
+Argentina"
+237,"Burkina Faso,
+Mali"
+238,Marshall Islands
+239,"Martinique,
+France"
+240,Mauritius
+241,"Sierra Leone,
+Liberia"
+242,"China,
+Vietnam"
+243,Georgia
+244,"Moldova,
+Romania"
+245,"Montenegro,
+Serbia"
+246,Montserrat
+247,Morocco
+248,Papua New Guinea
+249,Gabon
+250,New Zealand
+251,"Panama,
+Costa Rica"
+252,Nauru
+253,"Zimbabwe,
+Botswana"
+254,"Iran,
+Iraq"
+255,"Syria,
+Lebanon"
+256,"Lesotho,
+South Africa"
+257,"Thailand,
+Laos"
+258,Norway
+259,"South Sudan,
+Ethiopia"
+260,"Italy,
+France"
+261,"Ethiopia,
+Kenya"
+262,"Angola,
+Namibia"
+263,"Russia,
+Syria"
+264,"Germany,
+France"
+265,Palau
+266,"Sri Lanka,
+Thailand"
+267,Panama
+268,"Curaçao,
+Aruba"
+269,"Pakistan,
+Afghanistan"
+270,Peru
+271,"Italy,
+Argentina"
+272,Solomon Islands
+273,Poland
+274,"Greece,
+Turkey"
+275,"Portugal,
+Brazil"
+276,"Guatemala,
+Belize"
+277,"Myanmar,
+Bangladesh"
+278,"Nepal,
+India,
+China"
+279,"Hungary,
+Romania,
+Ukraine"
+280,"Romania,
+Moldova"
+281,Switzerland
+282,"Ukraine,
+Slovakia"
+283,"Norway,
+Sweden"
+284,"Samoa,
+United States"
+285,Central African Republic
+286,Suriname
+287,"Ivory Coast,
+Mali"
+288,"Serbia,
+Bosnia and Herzegovina"
+289,Seychelles
+290,Turkey
+291,"Zimbabwe,
+Zambia"
+292,"Poland,
+Czech Republic"
+293,Singapore
+294,Sri Lanka
+295,"Slovakia,
+Czech Republic"
+296,"Somalia,
+Ethiopia"
+297,"Mali,
+Niger"
+298,"Mali,
+Senegal,
+Gambia"
+299,South Africa
+300,"Israel,
+Jordan"
+301,Saint Kitts and Nevis
+302,Saint Lucia
+303,"Guinea,
+Sierra Leone"
+304,"Georgia,
+Russia"
+305,"Tanzania,
+Kenya"
+306,"Eswatini,
+South Africa"
+307,"Sweden,
+Finland"
+308,"Switzerland,
+France"
+309,"United States,
+Israel,
+Syria"
+310,"Tajikistan,
+Uzbekistan"
+311,"Morocco,
+Algeria"
+312,"United States,
+Dominican Republic"
+313,"Togo,
+Ghana"
+314,"China,
+Thailand"
+315,"Timor-Leste,
+Indonesia"
+316,"Thailand,
+Cambodia"
+317,"Eritrea,
+Sudan"
+318,Trinidad and Tobago
+319,Tonga
+320,Albania
+321,"Botswana,
+South Africa"
+322,Tunisia
+323,"Tunisia,
+Israel"
+324,"Turkmenistan,
+Afghanistan"
+325,"Turkey,
+Sweden"
+326,Ukraine
+327,"United Kingdom,
+Ireland"
+328,Uruguay
+329,"China,
+Kazakhstan"
+330,"Uzbekistan,
+Tajikistan"
+331,Venezuela
+332,"Vietnam,
+Cambodia"
+333,Saint Vincent and the Grenadines
+334,"Pakistan,
+Tajikistan"
+335,Vanuatu
+336,"Armenia,
+Turkey,
+Lebanon"
+337,"Senegal,
+Mauritania"
+338,"South Africa,
+Lesotho"
+339,Yemen
+340,"Yemen,
+Israel"
+341,"Nigeria,
+Benin"
+342,"Niger,
+Nigeria"
+343,Libya

@@ -1,0 +1,20 @@
+By Khizar Qureshi and Kendra Winhall
+
+This dataset contains over 700 languages spoken in New York City. In the dataset, each language has their original world region, country, the language family, location in NYC, size of language-speaking community. In order to download the data, go to https://languagemap.nyc/Data and click the export button on the top right.
+
+User stories:
+STORY - A Korean speaker is considering moving to New York City. They want to know where Korean-speaking communities are in and around NYC.
+
+IMPLEMENTATION: The user would select "Language" from the dropdown menu and type “Korean” into the search bar. The website could output information on where Korean-speaking communities are (such as “Flushing” and “Palisades Park (NJ)”) in a table. 
+----------
+STORY: A person interested in social linguistics wanting to study what languages are spoken in specific neighborhoods in NYC. 
+
+IMPLEMENTATION: The user could choose "Location" from the dropdown menu and input a specific region or neighborhood in NYC and get a list of languages spoken in that area sorted alphabetically, along with corresponding data for each community. 
+----------
+STORY: A public school county official in New York City is trying to spread awareness of a specific language and its significance in NYC. 
+
+IMPLEMENTATION: The user could choose "Language" from the dropdown menu and input a language into the search bar. Along with other data, they would get a list of neighborhoods where it is spoken and the size of the language-speaking community. 
+----------
+STORY: A random middle school student who lives in NYC interested in knowing what non-English languages are the most popular in their city. 
+
+IMPLEMENTATION: The user could toggle the button next to "Community Size" on the table in order to sort by the largest or smallest comunity sizes. The user would then get an output of languages such as Indian English, German, and Haitian Creole. 

@@ -1,0 +1,226 @@
+Khizar Qureshi and Kendra Winhall
+
+REQUEST:
+/help
+
+REPONSE: shows the api design text file. 
+
+
+REQUEST:
+/communities
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by language. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities
+        [{"language":"Abaza", "world_region":"Western Asia", "country":"Turkey,Russia", "language_family":"Abkhaz-Adyge", "location":"Wayne(NJ)", "community_size":"Smallest"},
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Astoria", "community_size":"Small"}
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Litle Italy", "community_size":"Small"}
+        ...]
+
+REQUEST:
+/communities/?all_contains={search_text}
+
+GET parameter:
+    search_text -- returns community sizes who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+by the size of each community alphabetically by each language. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?all_contains=ab
+        [{"language":"Abaza", "world_region":"Western Asia", "country":"Turkey,Russia", "language_family":"Abkhaz-Adyge", "location":"Wayne(NJ)", "community_size":"Smallest"},
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Astoria", "community_size":"Small"}
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Litle Italy", "community_size":"Small"}
+        ...]
+
+
+REQUEST:
+/communities/?language_contains={search_text}
+
+GET parameter:
+    search_text -- returns languages who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by language. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?language_contains=ab
+        [{"language":"Abaza", "world_region":"Western Asia", "country":"Turkey,Russia", "language_family":"Abkhaz-Adyge", "location":"Wayne(NJ)", "community_size":"Smallest"},
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Astoria", "community_size":"Small"}
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Litle Italy", "community_size":"Small"}
+        ...]
+
+
+REQUEST:
+/communities/?world_region_contains={search_text}
+
+GET parameter:
+    search_text -- returns world regions who contain search_text along with all the 
+    other corresponding data with the language community, case-insentive. 
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by world region. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?world_region_contains=south
+        [{"language":"Guyanese Creole", "world_region":"South America", "country":"Guyana", "language_family":"Indo-European", "location":"East Flatbush", "community_size":"Large"},
+        {"language":"Bolivian Spanish", "world_region":"South America", "country":"Bolivia", "language_family":"Indo-European", "location":"Jackson Heights", "community_size":"Medium"}
+        {"language":"Ecuadorian Spanish", "world_region":"South America", "country":"Ecuador", "language_family":"Indo-European", "location":"Bushwick", "community_size":"Large"}
+        ...]
+
+
+REQUEST:
+/communities/?country_contains={search_text}
+
+GET parameter:
+    search_text -- returns countries who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by country. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?country_contains=armenia
+        [{"language":"Classical Armenian", "world_region":"Western Asia", "country":"Armenia", "language_family":"Indo-European", "location":"Murray Hill", "community_size":"Medium"},
+        {"language":"Classical Armenian", "world_region":"Western Asia", "country":"Armenia", "language_family":"Indo-European", "location":"Douglaston-Little Neck", "community_size":"Medium"}
+        {"language":"Eastern Armenian", "world_region":"Western Asia", "country":"Armenia,Russia", "language_family":"Indo-European", "location":"Sheepshead Bay", "community_size":"Medium"}
+        ...]
+
+
+REQUEST:
+/communities/?language_family_contains={search_text}
+
+GET parameter:
+    search_text -- returns language families who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by language families. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?language_family_contains=Yuman
+        [{"language":"Mojave", "world_region":"Northern America", "country":"United States", "language_family":"Cochimi-Yuman", "location":"Hamilton Heights", "community_size":"Smallest"},
+        {"language":"Kumeyaay", "world_region":"Northern America", "country":"Mexico,United States", "language_family":"Yuman", "location":"West Village", "community_size":"Smallest"}]
+
+
+REQUEST:
+/communities/?location_contains={search_text}
+
+GET parameter:
+    search_text -- returns locations who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+alphabetically by locations. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?location_contains=lau
+        [{"language":"Marathi", "world_region":"Southern Asia", "country":"India", "language_family":"Indo-European", "location":"Laurence Harbor(NJ)", "community_size":"Small"}]
+
+
+REQUEST:
+/communities/?community_size_contains={search_text}
+
+GET parameter:
+    search_text -- returns community sizes who contain search_text along with all the 
+    other corresponding data with the language community, case-insensitive
+
+RESPONSE: a JSON list of dictionaries, each of which represents one language community sorted
+by the size of each community alphabetically by each language. Each dictionary in this list will have the following fields.
+    language -- (TEXT) the language spoken
+    world_region -- (TEXT) the region where the language originates from
+    country -- (TEXT) the country where the language originates from
+    language_family -- (TEXT) the language family of the language
+    location -- (TEXT) the region in NYC where the language community is 
+    community_size -- (TEXT) the size of the community in the region in NYC
+
+EXAMPLE:
+    /communities/?community_size_contains=large
+        [{"language":"African-American English", "world_region":"Northern America", "country":"United States", "language_family":"Indo-European", "location":"Hempstead(NY)", "community_size":"Large"},
+        {"language":"Akan", "world_region":"Western Africa", "country":"Ghana", "language_family":"Atlantic-Congo", "location":"University Heights", "community_size":"Large"}
+        {"language":"American Sign Language", "world_region":"Northern America", "country":"United States", "language_family":null, "location":"Jackson Heights", "community_size":"Large"}
+        ...]
+
+
+REQUEST:
+/communities/?all_contains=&sort_by=<category>&reverse=<true/false>
+
+GET parameters:
+    category -- what category to sort by
+    reverse -- true or false
+
+RESPONSE: returns a JSON list of dictionaries of all the data sorted by the given category and order determined by whether 'reverse' is true or false
+
+EXAMPLE:
+    /communities/?allcontains=&sort_by=language&reverse=true
+        [{"language":"Ü-Tsang Tibetan", "world_region":"Eastern Asia", "country":"China,India", "language_family":"Sino-Tibetan", "location":"Jackson Heights", "community_size":"Medium"},
+        {"language":"Zuwara", "world_region":"Northern Africa", "country":"Libya", "language_family":"Afro-Asiatic", "location":"Hollis", "community_size":"Largest"}
+        {"language":"Zulu", "world_region":"Northern Africa", "country":"South Africa, Lesotho", "language_family":"Atlantic-Congo", "location":"Edenwald", "community_size":"Largest"}
+        ...]
+
+
+REQUEST:
+/communities/?<category1>_contains={search_text}&sort_by=<category2>&reverse=<true/false>
+
+GET parameter:
+    category1 -- what category to search
+    search_text -- returns entries in the given category who contain search_text along with all the
+    other corresponding data with the language community, case-insentive. 
+    category2 -- what category to sort by
+    reverse -- true or false
+    
+RESPONSE: returns a JSON list of dictionaries of the data that contains the given search text in the given category,
+sorted by the given category and order determined by whether 'reverse' is true or false
+
+EXAMPLE:
+    /communities/?language_contains=ab&sort_by=language&reverse=false
+        [{"language":"Abaza", "world_region":"Western Asia", "country":"Turkey,Russia", "language_family":"Abkhaz-Adyge", "location":"Wayne(NJ)", "community_size":"Smallest"},
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Astoria", "community_size":"Small"}
+        {"language":"Abruzzese", "world_region":"Southern Europe", "country":"Italy", "language_family":"Indo-European", "location":"Litle Italy", "community_size":"Small"}
+        ...]
